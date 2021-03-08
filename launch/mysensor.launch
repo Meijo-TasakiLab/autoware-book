@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="tf" type="static_transform_publisher" 
+    name="velodyne_to_localizer" 
+    args="0 0 0 0 0 0 /velodyne /base_scan 10" />
+    <node name="trans_sensor" pkg="sensor_pkg" 
+    type="trans_sensor" output="screen" />
+</launch>
